@@ -15,7 +15,7 @@ N = int(input("Введите размер списка: "))
 import random
 arr = [random.randint(1,N) for _ in range(N)] # Создали массив [1..N].
 print(*(arr))
-X = int(input("Введите число для поиска: "))
+X = int(input("Введите число Х для поиска: "))
 arr.count(X)
 print(f"Сколько раз встречается число Х -> {arr.count(X)}")
 
