@@ -4,12 +4,17 @@
 
 # 10 → 1 2 4 8
 
+n = int(input())
+i = 0
+while 2 ** i <= n:
+    print(2 ** i)
+    i += 1
 
-n = int(input("Введите число ->  "))
-m = 1
-while m < n:
-    print (m,end='  ')
-    m = m * 2
+# n = int(input("Введите число ->  "))
+# m = 1
+# while m < n:
+#     print (m,end='  ')
+#     m = m * 2
 
 # 100
 # 1 2 4 8 16 32 64
