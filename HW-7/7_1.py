@@ -14,17 +14,28 @@
 **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
     **Вывод:** Парам пам-пам  - с ритмом все в порядке 
 '''
-song = input()
-volwes = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
-parts = song.split()
-itog = list()
-for item in parts:
-    k = 0
-    for letter in item:
-        if letter in volwes:
-            k += 1
-    itog.append(k)
-if len(set(itog)) == 1:
-    print('Парам пам-пам - с ритмом все в порядке! ')
+
+def rhythm(str):
+    str = str.split()
+    list_1 = []
+    for word in str:
+        sum_w = 0
+        for i in word:
+            if i in 'аеёиоуыэюя':
+                sum_w += 1
+        list_1.append(sum_w)
+    return len(list_1) == list_1.count(list_1[0])
+
+
+str_1 = 'пара-ра-рам рам-пам-папам па-ра-па-да'
+print(str_1)
+if rhythm(str_1):
+    print('Парам пам-пам - С ритмом все в порядке! ')
 else:
-    print('Пам парам - с ритмом все не в порядке')
+    print('Пам парам - Не всё в порядке с ритмом. ')
+
+# пара-ра-рам рам-пам-папам па-ра-па-да
+# Парам пам-пам - С ритмом все в порядке!
+
+# пара-ра-рам рам-пам-папам па-ра-пi-да
+# Пам парам - Не всё в порядке с ритмом.
